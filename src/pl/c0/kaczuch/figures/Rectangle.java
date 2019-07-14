@@ -4,9 +4,9 @@ public class Rectangle extends Squere
 {
     private double b;
 
-    public Rectangle(double a,double b)
+    public Rectangle(double x, double y, double a, double b)
     {
-        super(a);
+        super(x, y, a);
         this.b = b;
     }
 
@@ -23,6 +23,14 @@ public class Rectangle extends Squere
     @Override
     public double get_field()
     {
-        return get_a()*get_b();
+        return get_a() * get_b();
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Rectangle\n" +
+                "{a=" + get_a() + ", b=" + b + ", " + get_p()+
+                "}\n";
     }
 }
