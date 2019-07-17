@@ -2,8 +2,13 @@ package pl.c0.kaczuch.figures;
 
 public class Squere implements Figure
 {
-    private double a;
     private Point p;
+    private double a;
+
+
+    public Squere()
+    {
+    }
 
     public Squere(double x,double y, double a)
     {
@@ -35,10 +40,17 @@ public class Squere implements Figure
     @Override
     public String toString()
     {
-        return "Squere\n{" +
-                "a=" + a +
-                ", " + p +
-                "}\n";
+            return "Squere\n{" +
+                "\np=" + this.get_p() +
+                "\na=" + this.get_a() +
+                "\n}";
+    }
+
+    public static void main(String[] args)
+    {
+        Squere s = new Squere(1,2,3);
+
+        System.out.println(s);
     }
 
 

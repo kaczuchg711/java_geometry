@@ -34,8 +34,9 @@ public class Point
     @Override
     public String toString()
     {
-        return "" +
+        return "Point{" +
                 "x=" + x +
-                ", y=" + y ;
+                ", y=" + y +
+                '}';
     }
 }

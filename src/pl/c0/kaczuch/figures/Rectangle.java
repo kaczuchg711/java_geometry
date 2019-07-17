@@ -29,8 +29,17 @@ public class Rectangle extends Squere
     @Override
     public String toString()
     {
-        return "Rectangle\n" +
-                "{a=" + get_a() + ", b=" + b + ", " + get_p()+
-                "}\n";
+        return "Rectangle\n{" +
+                "\np=" + get_p() +
+                "\na=" + get_a() +
+                "\nb=" + this.b +
+                "\n}";
+    }
+
+    public static void main(String[] args)
+    {
+        Rectangle s = new Rectangle(1,2,3,2);
+
+        System.out.println(s);
     }
 }

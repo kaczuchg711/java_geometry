@@ -14,6 +14,7 @@ public class main
         for (Figure x: ft)
         {
             System.out.println(x);
+            System.out.println("\n");
         }
 
 
