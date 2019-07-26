@@ -1,7 +1,20 @@
 package pl.c0.kaczuch.figures;
+/**
+ * @author I
+ * @version the best
+ * @since 2019
+ * @deprecated info aby nie uzywac
+ * @see Rectangle wow hiperlacze :O
+ * comment test
+ * I really like
+ * this class
+ */
+
+
 
 public class Squere implements Figure
 {
+
     private Point p;
     private double a;
 
@@ -27,6 +40,11 @@ public class Squere implements Figure
     }
 
     @Override
+    /**
+     * get field
+     * @param 0
+     * @return field
+     */
     public double get_field()
     {
         return get_a()* get_a();
@@ -41,8 +59,8 @@ public class Squere implements Figure
     public String toString()
     {
             return "Squere\n{" +
-                "\np=" + this.get_p() +
-                "\na=" + this.get_a() +
+                "\n\tp=" + this.get_p() +
+                "\n\ta=" + this.get_a() +
                 "\n}";
     }
 

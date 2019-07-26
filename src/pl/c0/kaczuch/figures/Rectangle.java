@@ -30,9 +30,9 @@ public class Rectangle extends Squere
     public String toString()
     {
         return "Rectangle\n{" +
-                "\np=" + get_p() +
-                "\na=" + get_a() +
-                "\nb=" + this.b +
+                "\n\tp=" + get_p() +
+                "\n\ta=" + get_a() +
+                "\n\tb=" + this.b +
                 "\n}";
     }
 

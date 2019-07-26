@@ -37,8 +37,8 @@ public class Circle implements Figure
     public String toString()
     {
         return "Circle\n{" +
-                "\np=" + this.get_p() +
-                "\na=" + this.get_r() +
+                "\n\tp=" + this.get_p() +
+                "\n\ta=" + this.get_r() +
                 "\n}";
     }
 
