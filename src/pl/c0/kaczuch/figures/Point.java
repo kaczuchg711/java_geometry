@@ -39,4 +39,19 @@ public class Point
                 ", y=" + y +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj) return true;
+
+        if (obj == null) return false;
+
+        if (obj.getClass() != this.getClass()) return false;
+
+        Point o = (Point) obj;
+
+        return this.get_x() == o.get_x() && this.get_y() == this.get_y();
+
+    }
 }

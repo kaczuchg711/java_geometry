@@ -1,15 +1,15 @@
 package pl.c0.kaczuch.figures;
+
 /**
  * @author I
  * @version the best
- * @since 2019
- * @deprecated info aby nie uzywac
  * @see Rectangle wow hiperlacze :O
  * comment test
  * I really like
  * this class
+ * @since 2019
+ * @deprecated info aby nie uzywac
  */
-
 
 
 public class Squere implements Figure
@@ -23,10 +23,10 @@ public class Squere implements Figure
     {
     }
 
-    public Squere(double x,double y, double a)
+    public Squere(double x, double y, double a)
     {
         this.a = a;
-        this.p = new Point(x,y);
+        this.p = new Point(x, y);
     }
 
     public double get_a()
@@ -47,7 +47,7 @@ public class Squere implements Figure
      */
     public double get_field()
     {
-        return get_a()* get_a();
+        return get_a() * get_a();
     }
 
     public Point get_p()
@@ -58,17 +58,33 @@ public class Squere implements Figure
     @Override
     public String toString()
     {
-            return "Squere\n{" +
+        return "Squere\n{" +
                 "\n\tp=" + this.get_p() +
                 "\n\ta=" + this.get_a() +
                 "\n}";
     }
 
+    @Override
+    public boolean equals(Object obj)
+    {
+        if (this == obj) return true;
+
+        if (obj == null) return false;
+
+        if (obj.getClass() != this.getClass()) return false;
+
+        Squere o = (Squere) obj;
+
+        return this.get_p().equals(o.get_p()) && this.get_a() == o.get_a();
+
+    }
+
     public static void main(String[] args)
     {
-        Squere s = new Squere(1,2,3);
+        Squere s = new Squere(1, 2, 3);
+        Squere s1 = new Squere(1, 2, 3);
 
-        System.out.println(s);
+        System.out.println(s.equals(s1));
     }
 
 
