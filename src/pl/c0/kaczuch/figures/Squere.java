@@ -1,5 +1,7 @@
 package pl.c0.kaczuch.figures;
 
+import java.util.Objects;
+
 /**
  * @author I
  * @version the best
@@ -8,7 +10,7 @@ package pl.c0.kaczuch.figures;
  * I really like
  * this class
  * @since 2019
- * @deprecated info aby nie uzywac
+ * "@deprecated" info aby nie uzywac
  */
 
 
@@ -79,13 +81,18 @@ public class Squere implements Figure
 
     }
 
-    public static void main(String[] args)
+    @Override
+    public int hashCode()
     {
-        Squere s = new Squere(1, 2, 3);
-        Squere s1 = new Squere(1, 2, 3);
-
-        System.out.println(s.equals(s1));
+       return Objects.hash(this.a,this.p);
     }
 
+    public static void main(String[] args)
+    {
+        Squere s1 = new Squere(1, 2, 3);
+        Squere s2 = new Squere(1, 3, 3);
 
+        System.out.println(s2.hashCode());
+        System.out.println(s1.hashCode());
+    }
 }

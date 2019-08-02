@@ -38,7 +38,7 @@ public class Rectangle extends Squere
 
     public static void main(String[] args)
     {
-        Rectangle s = new Rectangle(1,2,3,2);
+        Rectangle s = new Rectangle(1, 2, 3, 2);
 
         System.out.println(s);
     }

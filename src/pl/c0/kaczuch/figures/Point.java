@@ -1,5 +1,7 @@
 package pl.c0.kaczuch.figures;
 
+import java.util.Objects;
+
 public class Point
 {
     private double x;
@@ -41,6 +43,12 @@ public class Point
     }
 
     @Override
+    public int hashCode()
+    {
+        return Objects.hash(this.x,this.y);
+    }
+
+    @Override
     public boolean equals(Object obj)
     {
         if (this == obj) return true;
@@ -52,6 +60,15 @@ public class Point
         Point o = (Point) obj;
 
         return this.get_x() == o.get_x() && this.get_y() == this.get_y();
+
+    }
+
+    public static void main(String[] args)
+    {
+        Object p1 = new Point(1,2);
+        Object p2 = new Point(2,2);
+
+        System.out.println(p1.hashCode() + "\n" + p2.hashCode());
 
     }
 }
